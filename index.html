@@ -134,19 +134,19 @@ span.anchor {
 <div class="header">
 <table align="center" width=100%>
 <tr><td align="left"><h2>Fred P. Davis</h2></td>
-<td align="right" valign="top">Staff Scientist with <a href="http://irp.nih.gov/pi/john-oshea">John O'Shea</a>, <a href="http://www.nih.gov">NIH</a> <a href="http://www.niams.nih.gov">NIAMS</a></td></tr>
+<td align="right" valign="top">Staff Scientist, <a href="http://www.nih.gov">NIH</a> <a href="http://www.niams.nih.gov">NIAMS</a></td></tr>
 </table>
 <p>
 <table bgcolor="lightsteelblue" align="center">
-<tr><td> <p align="justify">Every cell in our body has the same genome sequence, yet different kinds of cells express different parts of the genome. How does each cell know what genes to express?<br><br> <b>How is cell identity encoded in the genome?</b> I address this question in the nervous and immune systems &mdash; both of which have striking cell diversity &mdash; using genomic measurements and computation.</p></td></tr></table>
+<tr><td> <p align="justify">Every cell in our body has the same genome, yet different kinds of cells express different parts of it. How does this work?<br><br> <b>How is cell identity encoded in the genome?</b> I explore this question in the nervous and immune systems &mdash; both of which have striking cell diversity &mdash; using genomic measurements and computation.</p></td></tr></table>
 </div>
 
 <div class="sticky-navigation">
 <ul>
+<li><a href="#bio">Bio</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#papers">Papers</a></li>
-<li><a href="#software">Software</a></li>
-<li><a href="#cv">CV</a></li>
+<li><a href="#software">Code</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </div>
@@ -156,40 +156,44 @@ span.anchor {
 <!--<table width=90% align="center">-->
 <tr><td align="left">
 
+<span class="anchor" id="bio"></span>
+<h3 id="bio">Bio</h3>
+
+
+<table cellpadding="5"> <tr valign="top"> <td align="left">
+         As a quantitative biologist, I enjoy solving biomedical puzzles with computation, statistics, and visualization.<br><br>
+
+         I work at the <a href="http://www.nih.gov">NIH</a> as a Staff Scientist in <a href="http://irp.nih.gov/pi/john-oshea">John O'Shea's</a> lab for lymphocyte cell biology. I trained in computational genomics with <a href="http://eddylab.org">Sean Eddy</a> at <a href="http://janelia.org">HHMI Janelia</a> (Postdoc, Staff 2007-2015) and computational structural biology with <a href="http://salilab.org">Andrej Sali</a> at <a href="http://www.ucsf.edu">UCSF</a> (Ph.D., Biophysics. 2003-2007). Before that I studied pharmacy (Pharm.D., <a href="http://www.pharmacy.purdue.edu">Purdue</a> 2001).
+
+   <a href="files/fred_p_davis_cv.pdf">Download CV</a></h3>
+</td></tr>
+</table>
+
+
 <span class="anchor" id="projects"></span>
-<h3>Projects</h3>
+<h3>Recent Projects</h3>
 
 <!--<table bordercolor=black frame="above" cellpadding="5">-->
 
 <table cellpadding="5">
 <tr valign="top">
-<td><p align="justify"><b>Cell type-specific genomics of neurons.</b> New technologies are enabling genomic measurements from individual cell types. In collaboration with <a href="http://janelia.org/people/lee-henry">Lee Henry</a> (<a href="http://janelia.org">HHMI Janelia</a>), we analyze expression and chromatin profiles from different neuronal subtypes to characterize the gene regulatory networks that underly cell identity.</p><br>
-
-<p align="justify">&rarr; Transcription factors that regulate the identity of Kenyon cells in the <i>Drosophila</i> brain are expressed in these cells and repressed in octopaminergic neurons by the Polycomb-associated  H3K27me3 modification.</p>
-<p style="font-size:small"><a href="#Mo_etal16">Mo <i>et al</i>. <i>eLife.</i> 2016</a><br>
-<a href="#Mo_etal15">Mo, Mukamel, Davis, Luo, <i>et al</i>. <i>Neuron.</i> 2015</a><br>
-<a href="#Henry_etal12">Henry, Davis, Picard, Eddy. <i>Nucleic Acids Res.</i> 2012</a></p>
-
+   <td><p align="justify"><b>Using gene expression to explore neural circuit function.</b> Different neurons express different sets of genes, but can this information help us understand how neural circuits work? To explore this question, we turned to the <i>Drosophila</i> visual system, a well-established model for studying the development, genetics, and structure of neural circuits. Together with <a href="http://janelia.org/people/aljoscha-nern">Aljoscha Nern</a> (<a href="http://janelia.org">Janelia</a>) and <a href="https://www.cshl.edu/research/faculty-staff/">Lee Henry</a> (Janelia, now CSHL) we combined genetic tools to access individual cell types, a method to profile their nuclear transcriptomes, and a probabilistic model to interpret these measurements. We found that this information indeed helps illuminate circuit function, ranging from fundamental properties such as the neurotransmitters used at each synapse to higher-level circuit feedback mechanisms.</p></br>
+<p align="justify">&rarr; Gene expression levels measured by TAPIN-seq allow the inference of neurotransmitters produced by visual system neurons (row=cell type, column=gene).</p>
+<a href="#Davis_etal18">Davis & Nern <i>et al.</i> 2018.</a></p>
 </td>
-<td width=40%><img width="300" src="figs/f3_intact.png"></td>
+<td width=50% align="center"><img width="300" src="figs/davisnern18_fig5a.png"></td>
 </tr>
+
 </table>
 
 <p>
 <table bordercolor=black frame="above" cellpadding="5">
 <tr valign="top">
-<td width=40%><img width="350" src="figs/f1_transdiff.png">
-<!--<p align="justify">&uarr; <i>SOX2</i>, <i>FOXG1</i>, and <i>POU3F2</i> are TFs that can convert fibroblasts (where they are more strongly Polycomb repressed) to neural stem cells (where they are more highly expressed). In contrast, <i>TWIST1</i> is a TF implicated in epithelial to mesenchymal transition, a transdifferentiation-like process involved in cancer formation.</p> 
-<p style="font-size:small"><a href="#Davis_Eddy13">Davis and Eddy. <i>PLoS One</i>, in press</i></a></p>-->
+<td width=40%><img width="450" src="figs/iwata_fig2c.png">
 </td>
-<td><p align="justify"> <b>Identifying transcription factors that can convert cell identity.</b> Harold Weintraub and colleagues <a href="http://www.ncbi.nlm.nih.gov/pubmed/3690668">found nearly thirty years ago</a> that artifically expressing a single transcription factor, MyoD, in fibroblast cells can convert ("transdifferentiate") them to myoblasts. Since then, combinations of transcription factors have been discovered that can convert numerous other cell types, typically by empirically testing factors with a known developmental role in the goal cell type. We recently found that standard genomic methods (RNA-seq and ChIP-seq) can help identify conversion factors, as most are more strongly Polycomb repressed in the source cell and more highly expressed in the target cell. These results suggest that barriers between adult cell types, as depicted in <a href="http://www.ncbi.nlm.nih.gov/pubmed/12415319">Waddington's "epigenetic landscape"</a>, consist at least in part of differentially Polycomb-repressed transcription factors.</p>
+<td><p align="justify"> <b>A lineage-determining transcription factor also regulates signal response</b>. T-bet is the master transcription factor that specifies the T helper 1 lineage of T lymphocytes. Using a suite of genomic approaches, we found an additional and unexpected role for T-bet in repressing the Type I Interferon expression program.<br><br>&larr; In the absence of T-bet (red), T cells incorrectly respond to interferon-&gamma; (orange) as though it was interferon-&beta; (blue).</br>
 
-</td></tr>
-
-<tr valign="top">
-<td colspan=2>
-<p align="justify">&uarr; <i>SOX2</i>, <i>FOXG1</i>, and <i>POU3F2</i> are TFs that can convert fibroblasts (where they are more strongly Polycomb repressed) to neural stem cells (where they are more highly expressed). In contrast, <i>TWIST1</i> is a TF implicated in epithelial to mesenchymal transition, a transdifferentiation-like process involved in cancer formation.</p> 
-<p style="font-size:small"><a href="#Davis_Eddy13">Davis and Eddy. <i>PLoS One</i>, 2013</i></a></p>
+<p><a href="#Iwata_etal17">Iwata & Mikami, ..., O'Shea J+, Davis FP+, Kanno Y+. <i>Immunity</i>, 2017</i></a></p>
 </td>
 </tr>
 
@@ -199,13 +203,12 @@ span.anchor {
 <p>
 <table bordercolor=black frame="above" cellpadding="5">
 <tr valign="top">
-<td><p align="justify"><b>Characterizing gene expression in novel brain nuclei.</b> Gene expression in the mouse brain has been systematically characterized by <i>in situ</i> hybridization (ISH), and registered in the three-dimensional <a href="http://mouse.brain-map.org">Allen Brain Atlas</a>. I developed a computer program, <a href="http://fredpdavis.com/allenminer">ALLENMINER</a>, that enables flexible searching of this expression data. In collaboration with <a href="http://www.unifr.ch/med/de/research/mc">Marco Celio</a> (<a href="http://www.unifr.ch">University of Fribourg</a>), I use this program to characterize previously undescribed regions in the mouse brain, such as the parvalbumin-positive (PV1) nucleus of the lateral hypothalamus. This analysis aims to characterize the gene batteries that define cell identity.</p>
+   <td><p align="justify"><b>Mapping the epigenetic and transcriptional landscape of neurons.</b> Together with <a href="https://www.cshl.edu/research/faculty-staff/">Lee Henry</a> (Janelia, now CSHL), we developed a genetic approach to measure genomic properties in individual neuronal cell types. This technology reveals distinct gene expression, histone modification, and chromatin accessibility landscapes. We first demonstrated this technology in the <i>Drosophila</i> brain, using Polycomb-associated histone marks and gene expression to predict TFs critical for cell identity. In collaboration with Alisa Mo (<a href="http://nathanslab.mbg.jhmi.edu">Jeremy Nathans lab, Hopkins</a>), we demonstrated the ability of this approach to profile neuronal cell types in the mouse cortex.
+   <p align="justify">&rarr; Cell type-specific genomics identifies footprints of transcription factor (TF) binding and predicts TF regulatory networks active in specific cell types, such as VIP inhibitory neurons.</p>
+<a href="#Mo_etal15">Mo*, Mukamel*, Davis*, Luo*, <i>et al</i>. <i>Neuron.</i> 2015</a><br>
+<a href="#Henry_etal12">Henry, Davis, Picard, Eddy. <i>NAR.</i> 2012</a><br>
 </td>
-<td width=50%><img width="75" src="figs/f2_pv1_roi.png"><img width="300" src="figs/f2_pv1_ish.png">
-<p align="justify">&uarr; Candidate genes that express in the PV1 nucleus (green box) of the hypothalamus (shown in blue wireframe) were identified by ALLENMINER and validated by ISH.</p>
-<p style="font-size:small"><a href="#Davis_Eddy09">Davis and Eddy. <i>Bioinformatics</i> 2009.<a/><br><a href="#Girard_etal11">Girard, Meszar, Marti, Davis, Celio. <i>Eur J Neurosci</i> 2011.</a></p>
-
-</td>
+<td width=55% align="left"><img width="250" src="figs/mo15_fig5a.png"><img width="200" src="figs/mo15_fig5d.png"></td>
 </tr>
 </table>
 
@@ -213,22 +216,41 @@ span.anchor {
 <span class="anchor" id="papers"></span>
 <h3>Papers</h3>
 
+
 <table align="center">
 <tr><td align="left">
 
+      <a href="https://scholar.google.com/citations?user=7IwdznQAAAAJ&hl=en">Google Scholar</a></br>
+      <br>
 * co-first author, + corresponding authors<br>
 <ol>
+<span class="anchor" id="Davis_etal18"></span>
+<li value="31">
+<a href="https://doi.org/10.1101/385476">A genetic, genomic, and computational resource for exploring neural circuit function.</a><br>
+<b>Davis FP*</b>, Nern A*, Picard S, Reiser MB, Rubin GM, Eddy SR, Henry GL. <i>under review</i>. <a href="https://doi.org/10.1101/385476">bioRxiv preprint 385476</a>. (<a href="papers/Davis2018bioRxiv.pdf">preprint</a>).<br>
+Code: <a href="http://github.com/fredpdavis/opticlobe">github</a>. Data: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116969">NCBI GEO GSE116969</a></li><br>
+
+<span class="anchor" id="Bentzur_etal18"></span>
+<li value="30">
+<a href="https://doi.org/10.1371/journal.pgen.1007328">Odorant binding protein 69a connects social interaction to modulation of social responsiveness in Drosophila.</a><br>
+Bentzur A, Shmueli A, Omesi L, Ryvkin J, Knapp JM, Parnas M, <b>Davis FP</b>, Shohat-Ophir G. <i>PLoS Genetics</i> (2018) 14(4): e1007328. (<a href="papers/Bentzur2018PLoSGenetics.pdf">reprint</a>).</li><br>
+
+<span class="anchor" id="Xie_etal17"></span>
+<li value="29">
+<a href="http://dx.doi.org/10.1101/gad.303321.117">A dynamic interplay of enhancer elements regulates Klf4 expression in naïve pluripotency.</a><br>
+Xie L, Torigoe SE, Xiao J, Mai DH, Li L, <b>Davis FP</b>, Dong P, Marie-Nelly H, Grimm J, Lavis L, Darzacq X, Cattoglio C, Liu Z, Tjian R. <i>Genes Dev</i> (2017) 31(17):1795-1808. (<a href="papers/Xie2017GenesDev.pdf">reprint</a>).</li><br>
+
 <span class="anchor" id="Villarino_etal17"></span>
 <li value="28">
-<a href="http://dx.doi.org/10.1084/jem.20150907"> Subset- and tissue-defined STAT5 thresholds control homeostasis and function of innate lymphoid cells.</a><br>
-Villarino AV*, Sciume G*, <b>Davis FP</b>, Iwata S, Zitti B, Robinson GW, Hennighausen L, Kanno Y, O'Shea JJ. <i>J Exp Med</i> (2017) doi:10.1084/jem.20150907. (<a href="papers/Villarino2017JEM.pdf">reprint</a>).</li><br>
+<a href="http://dx.doi.org/10.1084/jem.20150907">Subset- and tissue-defined STAT5 thresholds control homeostasis and function of innate lymphoid cells.</a><br>
+Villarino AV*, Sciume G*, <b>Davis FP</b>, Iwata S, Zitti B, Robinson GW, Hennighausen L, Kanno Y, O'Shea JJ. <i>J Exp Med</i> (2017) 214(10:2999-3014. (<a href="papers/Villarino2017JEM.pdf">reprint</a>).</li><br>
 
 <span class="anchor" id="Iwata_etal17"></span>
 <li value="27">
 <a href="http://dx.doi.org/10.1016/j.immuni.2017.05.005">The transcription factor T-bet limits amplification of type I IFN transcriptome and circuitry in T helper 1 cells.</a><br>
 Iwata S*, Mikami Y*, &hellip;, O’Shea JJ+, <b>Davis FP+</b>, Kanno Y+. <i>Immunity</i> (2017)  46(6): p983-991.e4. (<a href="papers/Iwata2017Immunity.pdf">reprint</a>).<br>
 <a href="http://dx.doi.org/10.1016/j.immuni.2017.05.010">Preview by Lazarevic, Szabo, and Glimcher: T-bet Runs INTERFERence</a>.<br>
-Raw data: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96724">GEO GSE96724</a></li></br>
+Data: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96724">GEO GSE96724</a></li></br>
 
 <span class="anchor" id="Afzali_etal17"></span>
 <li value="26">
@@ -249,7 +271,7 @@ Shih HY*, Sciume G*, Mikami Y*, Guo L, Sun HW, Brooks SR, Urban Jr JF, <b>Davis 
 <li value="23">
 <a href="http://dx.doi.org/10.7554/eLife.11613">Epigenomic landscapes of retinal rods and cones.</a><br>
 Mo A, Luo C, <b>Davis FP</b>, Mukamel EA, Henry GL, Nery JR, Urich MA, Picard S, Lister R, Eddy SR, Beer MA, Ecker JR, Nathans J. <i>eLife</i> (2016). 5:e11613. (<a href="papers/Mo2016eLife.pdf">reprint</a>).<br>
-Raw data: <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72550">GEO GSE72550</a></li></br>
+Data: <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72550">GEO GSE72550</a></li></br>
 
 <span class="anchor" id="Davis_etal15"></span>
 <li value="22">
@@ -261,7 +283,7 @@ Raw data: <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72550">G
 <a href="http://dx.doi.org/10.1016/j.neuron.2015.05.018">Epigenomic signatures of neuronal diversity in the mammalian brain.</a><br>
 Mo A*, Mukamel EA*, <b>Davis FP*</b>, Luo C*, Henry GL, Picard S, Urich MA, Nery JR, Sejnowski TJ, Lister R, Eddy SR, Ecker JR, Nathans J. <i>Neuron</i>. (2015) 86(6): 1369-1384. (<a href="papers/Mo2015Neuron.pdf">reprint</a>)<br>
 Selected as Issue Highlight, <a href="http://www.cell.com/neuron/abstract/S0896-6273(15)00515-2">previewed by Steve Henikoff</a>.<br>
-Raw data: <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63137">GEO GSE63137</a></li></br>
+Data: <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE63137">GEO GSE63137</a></li></br>
 
 <li value="20">
 <a href="http://www.karger.com/Article/FullText/360152">NSF Workshop Report: Discovering General Principles of Nervous System Organization by Comparing Brain Maps Across Species.</a><br>
@@ -277,7 +299,7 @@ Striedter GF, Belgard TG, Chen C, <b>Davis FP</b>, Finlay BL, Gunturkun O, Hale 
 <li value="18">
 <a href="http://dx.doi.org/10.1093/nar/gks671">Cell-type specific genomics of Drosophila neurons.</a><br>
 Henry GL, <b>Davis FP</b>, Picard S, Eddy SR. <i>Nucleic Acids Res</i> (2012). 40 (19): 9691-9704. (<a href="papers/Henry2012NAR.pdf">reprint</a>).<br>Designated feature article.<br>
-Raw data: <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37027">GEO GSE37027</a></li><br>
+Data: <a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37027">GEO GSE37027</a></li><br>
 
 <li value="17">
 <a href="http://dx.doi.org/10.1016/j.str.2011.11.006">Phosphorylation at the interface.</a><br>
@@ -290,7 +312,7 @@ Girard F, Meszar Z, Marti C, <b>Davis FP</b>, Celio M. <i>Eur. J. Neurosci</i> (
 
 <li value="15">
 <a href="http://dx.doi.org/10.1039/C0MB00200C">Proteome-wide prediction of overlapping small molecule and protein binding sites using structure.</a><br>
-<b>Davis FP</b>. <i>Molecular Biosystems</i> (2011). 7(2): 545-547. (<a href="papers/Davis2011MolBiosyst.pdf">reprint</a>).<br>
+<b>Davis FP</b>. <i>Molecular Biosystems</i> (2011). 7(2): 545-557. (<a href="papers/Davis2011MolBiosyst.pdf">reprint</a>).<br>
 Selected for the <a href="http://scitation.aip.org/getabs/servlet/GetabsServlet?prog=normal&id=VIRT02000021000003000041000001&idtype=cvips&gifs=yes&ref=no"><i>Virtual Journal of Biological Physics Research</i></a>.<br>
 Software: <a href="http://fredpdavis.com/homolobind">HOMOLOBIND</a></li><br>
 
@@ -367,10 +389,11 @@ Database: <a href="http://salilab.org/modbase">MODBASE</a></li><br>
 </tr>
 </table>
 
-<h3 id="software">Software</h3>
+<h3 id="software">Code</h3>
 
 <table align="left"><tr><td align="left">
 I've written several programs, mostly for protein structure and gene expression analysis, and all are <a href="http://github.com/fredpdavis?tab=repositories">available at github</a>.
+I also publish the code I use to make figures in papers, <a href="#papers">linked above</a>.
 <p>
 </td></tr></table>
 
@@ -427,11 +450,9 @@ I've written several programs, mostly for protein structure and gene expression 
 
 </table>
 
-<h3 id="cv">CV: <a href="files/fred_p_davis_cv.pdf">download</a></h3>
-
-
-<!--</table>-->
+</table>
 </div>
+
 <div class="footer">
 <h3 id="contact">Contact:</h3>
 post: Lymphocyte Cell Biology Section, NIAMS, National Institutes of Health, Bethesda, MD 20892, USA <br>
